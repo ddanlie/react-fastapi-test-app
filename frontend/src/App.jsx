@@ -8,7 +8,7 @@ function Home() {
     try {
       const res = await fetch(`/api/reversed_str/${text}`);
       const data = await res.json();
-      setLabel(data.button_name);
+      setLabel(data.result);
     } catch (err) {
       setLabel('Error');
     }

@@ -6,7 +6,7 @@
     server_name yourdomain.com;
 
     # Serve React static files (JS, CSS, images)
-    location /app/assets/ {
+    location assets/ {
         alias /home/react-crm-hw/frontend/dist;
     }
 
