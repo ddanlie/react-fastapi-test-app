@@ -6,14 +6,14 @@
     server_name yourdomain.com;
 
     # Serve React static files (JS, CSS, images)
-    #location /app/assets/ {
-    #    root /path/to/your/project/frontend/dist;
-    #}
+    location /app/assets/ {
+        alias /home/react-crm-hw/frontend/dist;
+    }
 
     # Serve index.html for any /app/* route
     location /app/ {
         # alias has to be full path
-        alias /home/ /react-crm-hw/frontend;
+        alias /home/react-crm-hw/frontend;
         index index.html;
         try_files $uri @react_fallback;
     }
